@@ -26,7 +26,7 @@
     <div class="container">
         <a class="back" href="index.html">&larr; Back</a>
         <h1>Privacy Policy</h1>
-        <p class="date">Last updated: April 30, 2026</p>
+        <p class="date">Last updated: April 30, 2026 (rev 2)</p>
 
         <h2>Plain-English Summary</h2>
         <p>Life Clock is a healthspan habit-tracking app for iPhone. We are designed local-first, which means <strong>your health data does not leave your device</strong> unless you explicitly ask it to. We do not have a backend that stores your data, we do not show ads, we do not sell or share your data, and we do not use your Apple Health data for anything other than running the app for you.</p>
@@ -64,9 +64,13 @@
             <li>Your smoking status, alcohol frequency, baseline diet quality, baseline stress, sleep goal, weekly strength training frequency</li>
             <li>Per-day "Quick Log" entries: alcohol level, smoking/vaping, diet quality, stress, strength training, optional notes</li>
             <li>Tone-mode and color-palette preferences</li>
+            <li>Daily-reminder preference (on/off + the hour you picked, between 8 AM and 10 PM)</li>
         </ul>
         <p>This information is stored <strong>only</strong> on your device using Apple's SwiftData framework, and is <strong>not</strong> synced to iCloud, our servers, or any third party. Apple's iCloud sync is explicitly disabled for our data store.</p>
         <p>If you choose <strong>Profile &rarr; Delete all data</strong> in the app, all of the above is permanently removed from your device. We have no copy to delete on our side, because we never had one.</p>
+
+        <h3>Daily reminders</h3>
+        <p>If you opt in to a daily reminder (in onboarding or in Profile &rarr; Daily reminder), Life Clock asks iOS for permission to schedule a single daily local notification at the time you pick. Reminder notifications are scheduled and delivered <strong>entirely on your iPhone</strong> by iOS. We do not send notifications from a server, and we do not transmit your reminder preference anywhere. You can change or turn off the reminder at any time in Profile &rarr; Daily reminder, or in iOS Settings &rarr; Notifications &rarr; Life Clock.</p>
 
         <h3>Subscription Information</h3>
         <p>If you purchase Life Clock Pro (monthly, annual, or lifetime), the transaction is handled entirely by Apple via StoreKit 2. Apple is the merchant of record. We receive an <strong>anonymous, app-scoped transaction record</strong> confirming whether you currently have an active subscription. We do not receive your name, email, billing address, payment method, or any other identifying information from Apple. We cannot link a subscription to a person.</p>
@@ -82,6 +86,7 @@
             <li><strong>No microphone or camera access.</strong></li>
             <li><strong>No contacts, calendar, or photos access.</strong></li>
             <li><strong>No background data uploads.</strong> The app cannot upload data because there is nowhere to upload it to.</li>
+            <li><strong>No remote push notifications.</strong> Reminders are scheduled entirely on-device via iOS local notifications. We do not send data to Apple's APNs or any push service.</li>
         </ul>
 
         <h2>App Privacy Details (App Store "Nutrition Label")</h2>
