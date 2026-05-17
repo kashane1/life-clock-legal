@@ -15,4 +15,4 @@ HTML version that App Store Connect can link to.
 
 ## TODO before App Store submission
 
-- [ ] Set jurisdiction in `terms-of-use.html` (currently a placeholder).
+- [x] Set jurisdiction in `terms-of-use.html` (State of California, USA).

@@ -9,7 +9,8 @@
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a2332; background: #f7f9fc; line-height: 1.7; }
         .container { max-width: 720px; margin: 0 auto; padding: 60px 24px; }
         h1 { font-size: 28px; font-weight: 700; margin-bottom: 4px; color: #234897; }
-        .date { color: #6b7b8d; margin-bottom: 32px; font-size: 14px; }
+        .date { color: #6b7b8d; margin-bottom: 8px; font-size: 14px; }
+        .meta { color: #6b7b8d; margin-bottom: 32px; font-size: 14px; }
         h2 { font-size: 18px; font-weight: 600; margin-top: 28px; margin-bottom: 8px; }
         h3 { font-size: 16px; font-weight: 600; margin-top: 20px; margin-bottom: 6px; }
         p { margin-bottom: 12px; }
@@ -26,10 +27,13 @@
     <div class="container">
         <a class="back" href="index.html">&larr; Back</a>
         <h1>Privacy Policy</h1>
-        <p class="date">Last updated: April 30, 2026 (rev 2)</p>
+        <p class="date">Last updated: May 16, 2026</p>
+        <p class="meta"><strong>App:</strong> Life Clock: habits earn time<br>
+        <strong>Publisher:</strong> Kashane Justin Sakhakorn<br>
+        <strong>Contact:</strong> <a href="mailto:lifeclock.support@gmail.com">lifeclock.support@gmail.com</a></p>
 
         <h2>Plain-English Summary</h2>
-        <p>Life Clock is a healthspan habit-tracking app for iPhone. We are designed local-first, which means <strong>your health data does not leave your device</strong> unless you explicitly ask it to. We do not have a backend that stores your data, we do not show ads, we do not sell or share your data, and we do not use your Apple Health data for anything other than running the app for you.</p>
+        <p>Life Clock is a healthspan habit-tracking app for iPhone. We are designed local-first, which means <strong>your health data does not leave your device</strong> unless you explicitly ask it to (e.g., a future export feature). We do not have a backend that stores your data, we do not show ads, we do not sell or share your data with third parties for marketing, and we do not use your Apple Health data for anything other than running the app for you.</p>
         <div class="summary-box">If you remember nothing else from this page, remember this: what stays on your iPhone, stays on your iPhone.</div>
 
         <h2>What Data the App Touches</h2>
@@ -62,15 +66,16 @@
             <li>Your biological sex (optional, for population life-expectancy baseline)</li>
             <li>Your height and weight (optional)</li>
             <li>Your smoking status, alcohol frequency, baseline diet quality, baseline stress, sleep goal, weekly strength training frequency</li>
-            <li>Per-day "Quick Log" entries: alcohol level, smoking/vaping, diet quality, stress, strength training, optional notes</li>
-            <li>Tone-mode and color-palette preferences</li>
+            <li>Per-day "Daily Check-In" entries: alcohol level, smoking/vaping, diet quality, stress, strength training, optional notes</li>
+            <li>Tone-mode preference (gentle / coach / firmDirect)</li>
+            <li>Color-palette preference (default-navy / aurora-cool / sunset-warm)</li>
             <li>Daily-reminder preference (on/off + the hour you picked, between 8 AM and 10 PM)</li>
         </ul>
-        <p>This information is stored <strong>only</strong> on your device using Apple's SwiftData framework, and is <strong>not</strong> synced to iCloud, our servers, or any third party. Apple's iCloud sync is explicitly disabled for our data store.</p>
-        <p>If you choose <strong>Profile &rarr; Delete all data</strong> in the app, all of the above is permanently removed from your device. We have no copy to delete on our side, because we never had one.</p>
+        <p>This information is stored <strong>only</strong> on your device using Apple's SwiftData framework, and is <strong>not</strong> synced to iCloud, our servers, or any third party. Apple's iCloud sync is explicitly disabled for our data store (<code>cloudKitDatabase: .none</code>).</p>
 
         <h3>Daily reminders</h3>
         <p>If you opt in to a daily reminder (in onboarding or in Profile &rarr; Daily reminder), Life Clock asks iOS for permission to schedule a single daily local notification at the time you pick. Reminder notifications are scheduled and delivered <strong>entirely on your iPhone</strong> by iOS. We do not send notifications from a server, and we do not transmit your reminder preference anywhere. You can change or turn off the reminder at any time in Profile &rarr; Daily reminder, or in iOS Settings &rarr; Notifications &rarr; Life Clock.</p>
+        <p>If you choose <strong>Profile &rarr; Delete all data</strong> in the app, all of the above is permanently removed from your device. We have no copy to delete on our side, because we never had one.</p>
 
         <h3>Subscription Information</h3>
         <p>If you purchase Life Clock Pro (monthly, annual, or lifetime), the transaction is handled entirely by Apple via StoreKit 2. Apple is the merchant of record. We receive an <strong>anonymous, app-scoped transaction record</strong> confirming whether you currently have an active subscription. We do not receive your name, email, billing address, payment method, or any other identifying information from Apple. We cannot link a subscription to a person.</p>
@@ -80,8 +85,8 @@
         <ul>
             <li><strong>No third-party analytics SDKs.</strong> No Firebase, no Mixpanel, no Amplitude.</li>
             <li><strong>No third-party crash reporting in v1.</strong> If we add Sentry or TelemetryDeck later, we will update this policy first and never include health-derived fields in crash reports.</li>
-            <li><strong>No advertising IDs.</strong> No IDFA, no IDFV-for-tracking, no ad-tech identifiers.</li>
-            <li><strong>No tracking</strong> across apps or websites as defined by Apple's App Tracking Transparency framework.</li>
+            <li><strong>No advertising IDs.</strong> We do not use IDFA, IDFV-for-tracking, or any ad-tech identifier.</li>
+            <li><strong>No tracking across apps or websites</strong> as defined by Apple's App Tracking Transparency framework.</li>
             <li><strong>No location collection.</strong> We do not request CoreLocation permission.</li>
             <li><strong>No microphone or camera access.</strong></li>
             <li><strong>No contacts, calendar, or photos access.</strong></li>
@@ -99,7 +104,8 @@
         <p>If we ever change this &mdash; for example, by adding optional crash reporting &mdash; we will update both this page and the App Store listing before the change ships.</p>
 
         <h2>Children's Privacy</h2>
-        <p>Life Clock is rated <strong>12+</strong> in the App Store. Users who report a date of birth that makes them under 18 will not see the app's smoking or alcohol logging questions. The app is not designed for children under 12, and we do not knowingly collect data from children under 12.</p>
+        <p>Life Clock is rated <strong>13+</strong> in the App Store. Users who report a date of birth that makes them under 18 will not see the app's smoking or alcohol logging questions.</p>
+        <p>Life Clock does not knowingly collect personal information from users under the age of 13. As part of onboarding we ask for date of birth solely to determine age. If the date entered resolves to an age below 13, the app stops the onboarding flow at a block screen &mdash; no Apple Health data is requested, no profile is created, no subscription is offered, and the date of birth itself is not retained on your device. If you believe a user under 13 has somehow provided us with information, contact us at the address in the <strong>Contact</strong> section below and we will delete it.</p>
 
         <h2>Health Disclaimer</h2>
         <p>Life Clock is a wellness and habit-tracking app. It is <strong>not a medical device, a diagnostic tool, or a substitute for professional medical advice</strong>. The Life Clock estimate is based on publicly available population life-expectancy data (CDC FastStats) and a transparent rules engine. It is not a personalized prediction of your lifespan. Always talk to a qualified clinician about health concerns.</p>
@@ -114,7 +120,7 @@
         </ul>
 
         <h2>Contact</h2>
-        <p>Questions about this privacy policy? Email <a href="mailto:ksakhakorn@gmail.com">ksakhakorn@gmail.com</a>. We respond within 7 business days.</p>
+        <p>Questions about this privacy policy? Email <a href="mailto:lifeclock.support@gmail.com">lifeclock.support@gmail.com</a>. We respond within 7 business days.</p>
 
         <h2>Changes to This Policy</h2>
         <p>If we materially change this policy, we will post the updated version at the same URL (this page) and bump the "Last updated" date at the top. For significant changes &mdash; e.g., adding any data collection that didn't exist before &mdash; we will surface an in-app notice and require your acknowledgement before the change applies to you.</p>
